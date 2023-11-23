@@ -10,10 +10,10 @@ import './styles/App.scss'
 //page components
 import Home from './component/Home.jsx'
 import HeroesIndex from './component/HeroesIndex.jsx'
-// import HeroSingle from './component/HeroSingle.jsx'
+import HeroSingle from './component/HeroSingle.jsx'
 
 //loaders
-import { getSuperHeroes } from "./utils/loader.js"
+import { getHeroSingle, getSuperHeroes } from "./utils/loader.js"
 
 const router = createBrowserRouter([
   {
@@ -31,10 +31,11 @@ const router = createBrowserRouter([
         element: <HeroesIndex />,
         loader: getSuperHeroes
       },
-      // {
-      //   path: "/heroes/:id",
-      //   element: <HeroSingle />
-      // }
+      {
+        path: "/heroes/:id",
+        element: <HeroSingle />,
+        loader: async ({ params }) => getHeroSingle(params.id)
+      }
     ]
   },
 ]);

@@ -118,6 +118,24 @@ button:focus-visible {
 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
 }
+.hero-single{
+  width: 600px;
+  border: solid 10px black;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #000;
+  .card{
+    border: none;
+  }
+  .card-img{
+    width: 60%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border: solid 3px black
+  }
+}
 
 @media (prefers-color-scheme: light) {
   :root {
