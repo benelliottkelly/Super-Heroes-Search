@@ -1,20 +1,26 @@
-// import { useState } from 'react'
+import {useState, useEffect } from 'react'
 
 
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
 
 //components
 import Nav from './component/Nav'
 import Footer from './component/Footer'
 
 function App() {
+const navigation = useNavigation()
 
 
   return (
     <>
       <Nav />
       <main>
-        <Outlet />
+        {
+          navigation.state === "idle" ?
+            <Outlet />
+            :
+            <div className='loading'></div>
+        }
       </main>
 
       <Footer />

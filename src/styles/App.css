@@ -139,4 +139,20 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.modal-header {
+  flex-grow: 1;
+}
+.modal-header button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.modal-header a {
+  text-decoration: none;
+}
+.modal-header a:nth-of-type(1) {
+  position: absolute;
+  top: 200px;
+  right: 50px;
 }/*# sourceMappingURL=App.css.map */

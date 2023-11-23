@@ -1,6 +1,7 @@
 export default function Home(){
   return (
-  
-  <h1>Heroes And Villians</h1>
+  <section className="homescreen">
+  <h1>Heroes <br/> And <br/> Villians</h1>
+  </section>
   )
 }

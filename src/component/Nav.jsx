@@ -3,27 +3,40 @@ import { Link } from "react-router-dom"
 
 // Bootstrap Components
 import Modal from 'react-bootstrap/Modal'
+import { Container } from "react-bootstrap";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+
 
 export default function Nav() {
   const [show, setShow] = useState(false)
   // src={logoIcon}
   return (
     <>
-      <header className='p-2 p-md-3 p-lg-4'>
-        <Link to="/">Home</Link>
-        <button className='nav-toggle' onClick={() => setShow(true)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <header>
+
+        <Link to="/" ></Link>
+        <div>
+          <p>Turn page </p>
+          <button className='nav-toggle' onClick={() => setShow(true)}>
+
+          </button>
+        </div>
       </header>
 
       <Modal show={show} fullscreen={true} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
           <nav onClick={() => setShow(false)}>
-            <Link to="/">Home</Link>
-            <Link to="/heroes">Heroes Index</Link>
-            <Link to="/heroes/:id">Hero Single</Link>
+            <Container className="wrapper">
+              <Row>
+                <Col md={12}><Link className="homelink" to="/">Home</Link></Col>
+                <Col md={6}><Link className="indexlink" to="/heroes">Heroes Index</Link></Col>
+                <Col md={6}><Link className="singlelink" to="/heroes/:id">Hero Single</Link></Col>
+
+              </Row>
+            </Container>
+
           </nav>
         </Modal.Header>
       </Modal>

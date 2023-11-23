@@ -28,10 +28,12 @@ export default function HeroSingle() {
     <Container fluid className='hero-single' style={cardColour(alignment)} >
 
       <Row>
-        <Col md={12}><h2 className='text-center bold display-3 mb-2'>#{id} {name}</h2></Col>
+        <Col md={12} className="cardname"><h2  className='text-center bold mt-4 mb-4'>#{id} {name}</h2></Col>
 
         <Col md={12}><div className="card-img" style={{ backgroundImage: `url(${md})` }}></div></Col>
-        <Col md={6}>
+        <div className="stats">
+          <Row>
+        <Col md={8}>
           <p>Identity: {alias} </p>
           <p>Occupation: {occupation && occupation !== "-" ? occupation : "Unknown"} </p>
           <p>Race: {race ? race : "Unknown"}</p>
@@ -40,7 +42,7 @@ export default function HeroSingle() {
           <p>Alignment: {alignment && alignment !== "-" ? alignment : "Neutral"}</p>
         </Col>
 
-        <Col md={6}>
+        <Col md={4} className="singlestat">
           <p>INT: {intelligence}</p>
           <p>STR: {strength}</p>
           <p>SPD: {speed}</p>
@@ -48,6 +50,9 @@ export default function HeroSingle() {
           <p>PWR: {power}</p>
           <p>CMBT: {combat}</p>
         </Col>
+        </Row>
+        </div>
+        
 
 
 
