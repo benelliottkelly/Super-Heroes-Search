@@ -32,7 +32,8 @@ export default function Nav() {
               <Row>
                 <Col md={12}><Link className="homelink" to="/">Home</Link></Col>
                 <Col md={6}><Link className="indexlink" to="/heroes">Heroes Index</Link></Col>
-                <Col md={6}><Link className="singlelink" to="/heroes/:id">Hero Single</Link></Col>
+                <Col md={6}><Link className="singlelink" to="/battle">Battle</Link></Col>
+
 
               </Row>
             </Container>

@@ -7,25 +7,25 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export default function HeroesIndex() {
+export default function HeroesSelect() {
   const heroes = useLoaderData()
-
   const [alignment, setAlignment] = useState('All')
-
-
   const [filteredHeroes, setFilteredHeroes] = useState([])
   const [inputQuery, setInputQuery] = useState('')
 
 
 
-  useEffect(() => {
 
+
+
+  useEffect(() => {
     const pattern = new RegExp(inputQuery, 'i')
     const filteredArray = heroes.filter(hero => {
       return pattern.test(hero.name) && (hero.biography.alignment === alignment ||(hero.biography.alignment === "-" && alignment === "neutral")|| alignment === "All")
     })
     setFilteredHeroes(filteredArray)
   }, [alignment, heroes, inputQuery])
+
 
 
   console.log(heroes)
@@ -50,18 +50,17 @@ export default function HeroesIndex() {
                 md={4}
                 lg={3}
                 style={{ backgroundImage: `url(${md})` }}
-                to={`/heroes/${id}`}
+                to={`/battle/${id}`}
+                >
+                  {name}
+                </Col>
+              )
+            })}
+          </Row>
+        </Container>
+      </>
+    )
+  }
 
-              >
-                {name}
-              </Col>
-            )
-          })}
 
-        </Row>
-      </Container>
 
-    </>
-
-  )
-}

@@ -16,7 +16,8 @@ const navigation = useNavigation()
       <Nav />
       <main>
         {
-          navigation.state === "idle" ?
+          
+          navigation.state === 'idle' ?
             <Outlet />
             :
             <div className='loading'></div>

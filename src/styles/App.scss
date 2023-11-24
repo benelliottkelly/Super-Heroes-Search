@@ -128,6 +128,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 800px;
+  height: 100vh;
+  margin: 0 auto;
 }
 .nav-toggle {
   background-image: url("../assets/images/pageturn.png");
@@ -296,4 +298,8 @@ button:focus-visible {
 
 .singlelink {
   background-image: url("../assets/images/BANG.png");
+}
+
+.battlecards{
+  width: 50vw;
 }
