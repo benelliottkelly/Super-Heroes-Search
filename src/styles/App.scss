@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-
 }
+
 @font-face {
   font-family: 'Heroes Legend Hollow';
   src: url('HeroesLegendHollow.woff') format('woff');
@@ -9,7 +9,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 
 @font-face {
   font-family: 'Super Squad';
@@ -32,11 +31,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -47,9 +44,18 @@
   text-align: center;
 }
 
+body{
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  border: solid black;
+  border-width: 1px 4px 3px 5px;
+  border-radius: 1% 0% 2% 3%/1% 2% 1% 4%;
+}
+
 main {
   height: 100%;
-
 }
 
 .homescreen {
@@ -64,7 +70,6 @@ main {
   background-size: cover;
 }
 
-
 .hero-home {
   margin: 0 auto;
   width: 100%;
@@ -73,24 +78,11 @@ main {
   justify-content: space-between;
 }
 
-
-
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}
-
-
-
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
-
-
 }
 
 h1 {
@@ -118,10 +110,9 @@ header {
     font-family: 'Permanent Marker', cursive;
     margin: 0;
     color: red;
-    
   }
-
 }
+
 .loading{
   background-image: url("../assets/images/hero-loading.gif");
   background-position: center;
@@ -131,6 +122,7 @@ header {
   height: 100vh;
   margin: 0 auto;
 }
+
 .nav-toggle {
   background-image: url("../assets/images/pageturn.png");
   border: none;
@@ -138,15 +130,11 @@ header {
   height: 70px;
   width: 70px;
   background-size: cover;
-  
   background-position: right;
-
 }
 
 .nav-toggle:hover {
   background-size: 130%;
-  
-
 }
 
 button {
@@ -174,17 +162,18 @@ button:focus-visible {
   margin: 2em;
   display: flex;
   justify-content: center;
-
   a {
-
     padding: 1em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
-
     margin: 0.5em;
-    border: solid 5px black;
+    border: solid black;
+    border-color: black;
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
@@ -281,15 +270,10 @@ button:focus-visible {
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
-
 }
 
 .homelink {
-
   background-image: url("../assets/images/BAM.png");
-
-
-
 }
 
 .indexlink {
