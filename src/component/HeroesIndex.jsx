@@ -38,7 +38,7 @@ export default function HeroesIndex() {
         <option value="neutral">Neutral</option>
       </select>
       <input name="search" placeholder="Search..." value={inputQuery} onChange={(e) => setInputQuery(e.target.value)} />
-      <h1 className="fs-1">Heroes and Villians</h1>
+      <h1 className="fs-1">Heroes and Villains</h1>
       <Container fluid>
         <Row className='hero-list'>
           {filteredHeroes.map(heroes => {
