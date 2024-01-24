@@ -1,7 +1,6 @@
 import { useLoaderData, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-
 // Bootstrap Components
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -11,24 +10,17 @@ export default function HeroesIndex() {
   const heroes = useLoaderData()
 
   const [alignment, setAlignment] = useState('All')
-
-
   const [filteredHeroes, setFilteredHeroes] = useState([])
   const [inputQuery, setInputQuery] = useState('')
 
-
-
   useEffect(() => {
-
     const pattern = new RegExp(inputQuery, 'i')
     const filteredArray = heroes.filter(hero => {
-      return pattern.test(hero.name) && (hero.biography.alignment === alignment ||(hero.biography.alignment === "-" && alignment === "neutral")|| alignment === "All")
+      return pattern.test(hero.name) && (hero.biography.alignment === alignment || (hero.biography.alignment === "-" && alignment === "neutral") || alignment === "All")
     })
     setFilteredHeroes(filteredArray)
   }, [alignment, heroes, inputQuery])
 
-
-  console.log(heroes)
   return (
     <>
       <select className="m-4" name="alignment" value={alignment} onChange={(e) => setAlignment(e.target.value)}>
@@ -44,24 +36,13 @@ export default function HeroesIndex() {
           {filteredHeroes.map(heroes => {
             const { id, name, images: { md } } = heroes
             return (
-              <Col as={Link}
-                key={id}
-                xs={6}
-                md={4}
-                lg={3}
-                style={{ backgroundImage: `url(${md})` }}
-                to={`/heroes/${id}`}
-
-              >
+              <Col as={Link} key={id} xs={6} md={4} lg={3} style={{ backgroundImage: `url(${md})` }} to={`/heroes/${id}`}>
                 {name}
               </Col>
             )
           })}
-
         </Row>
       </Container>
-
     </>
-
   )
 }
