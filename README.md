@@ -15,14 +15,14 @@ The project uses React, Bootstrap and SASS, all of which are included in the dep
 This was a pair project which was to be completed in under 2 days. My partner for the project was Jerrell Boyer, whose GitHub can be found here: [https://github.com/Jerrellbb](https://github.com/Jerrellbb)
 
 ## Technologies Used
-###HTML
+### HTML
 - HTML was used to import the various fonts used as well as giving the page a title and favicon.
 
-## CSS via SASS
+### CSS via SASS
 - The majority of styling was done using SASS including fonts, logos and background colours for the individual “cards” showing hero/villains info and stats.
 - SASS was also used to implement a hover effect on the navigation button, making it grow and move to look like you were turning a page to navigate.
 
-## JavaScript via React
+### JavaScript via React
 - React was used to create a browser router and layout the website from there.
 - The API was pulled in using a JavaScript function and manipulated within React.
 - A filter was implemented using the useState() function, which allows the user to filter the API by a drop down containing the hero/villains alignment, and/or a text input matching the hero/villains name. 
